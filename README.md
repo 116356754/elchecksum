@@ -1,4 +1,5 @@
 ##install
+npm install elchecksum --save
 
 ##usage
 var preFrameSum = '59120c11e494586ef09277942066184c';
