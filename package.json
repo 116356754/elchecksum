@@ -1,6 +1,6 @@
 {
   "name": "elchecksum",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "check electron's exe and app resources md5 validate",
   "main": "index.js",
   "scripts": {
@@ -17,13 +17,20 @@
     "directory"
   ],
   "dependencies": {
-    "md5-file": "^3.1.0",
-    "once": "^1.3.3"
+    "md5-file": "^3.1.0"
   },
-  "author": "wangky",
+  "author": {
+    "name": "wangky"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/116356754/elchecksum/issues"
   },
-  "homepage": "https://github.com/116356754/elchecksum#readme"
+  "homepage": "https://github.com/116356754/elchecksum#readme",
+  "readme": "##install\r\n\r\n##usage\r\nvar preFrameSum = '59120c11e494586ef09277942066184c';\r\nvar preAppSum = 'f4875ae0bdf02ccb808adc14eed69a8d';\r\n\r\nelcheck.setFeedMD5(preFrameSum,preAppSum, 'E:/enginer/Taitan.exe', 'E:/enginer/resources/app');\r\n\r\nelcheck.checksumForRemote();\r\n\r\nelcheck.on('elcheck-validate',()=>console.log('check app and frame is validate!'));\r\n\r\nelcheck.on('elcheck-invalidate',()=>console.log('check app or frame is not validate!'));\r\n",
+  "readmeFilename": "README.md",
+  "gitHead": "cd9bef2c6212cd8e5a99de1c846490dd867b3eb3",
+  "_id": "elchecksum@1.1.0",
+  "_shasum": "e097b4b113fba1bbbc89089ecb01e072e15013fb",
+  "_from": "elchecksum@*"
 }

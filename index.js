@@ -30,6 +30,7 @@ elCheckSum.prototype.setFeedMD5 = function (originFrameMD5, originAppMD5, frameE
 };
 
 elCheckSum.prototype.checksumForRemote = function () {
+
     var self = this;
     var child = cp.fork(path.join(__dirname,'lib', 'forkChild.js'));
 
@@ -45,12 +46,12 @@ elCheckSum.prototype.checksumForRemote = function () {
         console.log('hash result is :' + m.result);
         child.kill('SIGTERM');
         if (!m.result) {
-            //console.log('check app or frame is not validate!');
+            console.log('check app or frame is not validate!');
             return self.emit('elcheck-invalidate');
         }
         else
         {
-            //console.log('check app and frame is validate!');
+            console.log('check app and frame is validate!');
             return self.emit('elcheck-validate');
         }
     });
